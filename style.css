@@ -1,0 +1,392 @@
+/* Style for the header section */
+header {
+  /* Soft eco green background */
+  background-color: #7ed6a2;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch children horizontally */
+  position: relative;
+}
+
+/* Logo style */
+.logo {
+  font-family: 'Montserrat', Arial, sans-serif; /* Logo/title font */
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: #23424a; /* Match eco blue for menu icon */
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: none; /* Hidden by default on mobile */
+  flex-direction: column; /* Stack links vertically on mobile */
+  gap: 10px; /* Space between links */
+  align-items: flex-start;
+  background: #f47521;
+  width: 100%;
+}
+
+nav ul.show {
+  display: flex; /* Show menu when toggled */
+}
+
+nav a {
+  text-decoration: none;
+  color: #23424a; /* Deep blue for links */
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  display: block;
+  background: #b3e0ff; /* Soft blue background for links */
+}
+
+nav a:hover {
+  background: #a0d8ef; /* Slightly deeper blue on hover */
+  color: #206040; /* Darker green text on hover */
+}
+
+/* Make navigation horizontal and spaced on larger screens */
+@media (min-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .menu-toggle {
+    display: none; /* Hide menu button on desktop */
+  }
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    background: none;
+    width: auto;
+  }
+}
+
+/* Use Google Fonts for easy-to-read font combo */
+body {
+  font-family: 'Open Sans', Arial, sans-serif; /* Main text font */
+  background-color: #eafaf1; /* Soft green background */
+  color: #23424a; /* Deep blue text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section styles */
+.hero {
+  background-color: #b3e0ff; /* Soft blue background */
+  min-height: 100vh; /* Take up full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.5em;
+  color: #206040; /* Deep green for headline */
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.2em;
+  color: #23424a;
+  max-width: 500px;
+}
+
+/* Destinations section styles */
+.destinations {
+  background: #eafaf1; /* Soft green background */
+  padding: 32px 16px;
+}
+
+.destinations h2 {
+  text-align: center;
+  color: #206040;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-bottom: 24px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically on mobile */
+  gap: 24px;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(32, 96, 64, 0.08);
+  padding: 16px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s; /* Add transform to transition */
+}
+
+.card:hover {
+  /* Enlarge and slightly shift the card on hover */
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 8px 24px rgba(32, 96, 64, 0.16);
+  z-index: 1;
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%; /* Make image responsive */
+  height: 180px;    /* Set a fixed height for all card images */
+  object-fit: cover; /* Crop images to fill the area and keep them uniform */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 12px 0 8px 0;
+  color: #23424a;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.card p {
+  color: #23424a;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1em;
+}
+
+@media (min-width: 600px) {
+  .card-list {
+    flex-direction: row; /* Align cards horizontally on wider screens */
+    justify-content: center;
+    gap: 32px; /* More space between cards */
+  }
+  .card {
+    max-width: 300px;
+    margin: 0 8px; /* Add horizontal margin for spacing */
+    padding: 20px; /* Slightly more padding on desktop */
+  }
+  .destinations {
+    padding: 48px 32px; /* More padding for section */
+  }
+}
+
+@media (min-width: 800px) {
+  .card-list {
+    gap: 40px;
+  }
+  .card {
+    max-width: 300px;
+  }
+}
+
+/* Call-to-action (CTA) section styles */
+.cta {
+  background: #7ed6a2; /* Soft eco green */
+  text-align: center;
+  padding: 40px 16px;
+  margin: 32px 0 0 0;
+  border-radius: 16px;
+}
+
+.cta p {
+  font-size: 1.3em;
+  color: #206040;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #f47521; /* Crunchyroll orange */
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(32, 96, 64, 0.08);
+}
+
+.cta-btn:hover {
+  background: #ffb366;
+  color: #206040;
+}
+
+/* Side-scroll destinations widget styles */
+.destinations-widget {
+  background: #eafaf1;
+  padding: 32px 0;
+  margin-bottom: 32px;
+}
+
+.destinations-widget h2 {
+  text-align: center;
+  color: #206040;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-bottom: 24px;
+}
+
+.widget-bar {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 16px;
+  justify-content: center; /* Center the widget bar */
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.widget-card {
+  flex: 0 0 60px; /* Tiny by default */
+  height: 80px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(32, 96, 64, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.widget-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.widget-card .card-details {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Hovered card: enlarge and show details */
+.widget-card:hover,
+.widget-card:focus {
+  flex: 0 0 320px;
+  height: 340px;
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(32, 96, 64, 0.16);
+}
+.widget-card:hover img,
+.widget-card:focus img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px 12px 0 0;
+}
+.widget-card:hover .card-details,
+.widget-card:focus .card-details {
+  display: block;
+  opacity: 1;
+  padding: 16px;
+}
+
+/* Adjacent cards: medium size (using :has for modern browsers) */
+.widget-card:has(+ .widget-card:hover),
+.widget-card:hover + .widget-card,
+.widget-card + .widget-card:has(+ .widget-card:hover),
+.widget-card:has(+ .widget-card:has(+ .widget-card:hover)) {
+  flex: 0 0 180px;
+  height: 220px;
+  z-index: 1;
+}
+.widget-card:has(+ .widget-card:hover) img,
+.widget-card:hover + .widget-card img,
+.widget-card + .widget-card:has(+ .widget-card:hover) img,
+.widget-card:has(+ .widget-card:has(+ .widget-card:hover)) img {
+  width: 120px;
+  height: 120px;
+}
+.widget-card:has(+ .widget-card:hover) .card-details,
+.widget-card:hover + .widget-card .card-details,
+.widget-card + .widget-card:has(+ .widget-card:hover) .card-details,
+.widget-card:has(+ .widget-card:has(+ .widget-card:hover)) .card-details {
+  display: block;
+  opacity: 1;
+  padding: 8px 0 0 0;
+}
+.widget-card:has(+ .widget-card:hover) h3,
+.widget-card:hover + .widget-card h3,
+.widget-card + .widget-card:has(+ .widget-card:hover) h3,
+.widget-card:has(+ .widget-card:has(+ .widget-card:hover)) h3 {
+  font-size: 1.1em;
+  margin: 8px 0 0 0;
+}
+.widget-card:has(+ .widget-card:hover) p,
+.widget-card:hover + .widget-card p,
+.widget-card + .widget-card:has(+ .widget-card:hover) p,
+.widget-card:has(+ .widget-card:has(+ .widget-card:hover)) p {
+  display: none;
+}
+
+/* For the card before the hovered one */
+.widget-card + .widget-card:has(+ .widget-card:hover),
+.widget-card:has(+ .widget-card:has(+ .widget-card:hover)) {
+  flex: 0 0 180px;
+  height: 220px;
+  z-index: 1;
+}
+.widget-card + .widget-card:has(+ .widget-card:hover) img,
+.widget-card:has(+ .widget-card:has(+ .widget-card:hover)) img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Hide details for non-hovered cards */
+.widget-card:not(:hover):not(:focus) .card-details {
+  display: none;
+  opacity: 0;
+}
+
+/* Responsive: allow full width on mobile */
+@media (max-width: 700px) {
+  .widget-bar {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center;
+    height: 80vh;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .widget-card {
+    margin-bottom: 12px;
+  }
+  .widget-card:last-child {
+    margin-bottom: 0;
+  }
+}
